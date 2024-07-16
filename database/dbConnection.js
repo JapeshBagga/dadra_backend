@@ -1,14 +1,15 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
+import "dotenv/config";
 
-export const dbConnection = () => {
-  mongoose
-    .connect(process.env.MONGO_URI, {
-      dbName: "MERN_STACK_HOSPITAL_MANAGEMENT_SYSTEM",
-    })
-    .then(() => {
-      console.log("Connected to database!");
-    })
-    .catch((err) => {
-      console.log("Some error occured while connecting to database:", err);
-    });
-};
+export default async function () {
+    try {
+        const MONGO_URI = process.env.MONGO_URI;
+        await mongoose.connect(MONGO_URI, {
+          dbName: "MERN_STACK_HOSPITAL_MANAGEMENT_SYSTEM",
+        });
+        mongoose.set("debug", true);
+        console.log("MongoDB: connected");
+    } catch (e) {
+        console.error("MongoDB: ", e);
+    }
+}
