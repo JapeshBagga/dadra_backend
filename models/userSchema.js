@@ -4,15 +4,10 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const userSchema = new mongoose.Schema({
-  firstName: {
+  name: {
     type: String,
-    required: [true, "First Name Is Required!"],
-    minLength: [3, "First Name Must Contain At Least 3 Characters!"],
-  },
-  lastName: {
-    type: String,
-    required: [true, "Last Name Is Required!"],
-    minLength: [3, "Last Name Must Contain At Least 3 Characters!"],
+    required: [true, "Name Is Required!"],
+    minLength: [3, " Name Must Contain At Least 3 Characters!"],
   },
   email: {
     type: String,
@@ -31,18 +26,21 @@ const userSchema = new mongoose.Schema({
   //   minLength: [13, "NIC Must Contain Only 13 Digits!"],
   //   maxLength: [13, "NIC Must Contain Only 13 Digits!"],
   // },
-  dob: {
-    type: Date,
-    required: [true, "DOB Is Required!"],
-  },
-  gender: {
+  // dob: {
+  //   type: Date,
+  //   required: [true, "DOB Is Required!"],
+  // },
+  age: {
     type: String,
-    required: [true, "Gender Is Required!"],
-    enum: ["Male", "Female"],
+    required: [true, "Age Is Required!"],
+  },
+  problem: {
+    type: String,
+    required: [true, "Problem Is Required!"],
   },
   password: {
     type: String,
-    required: [true, "Password Is Required!"],
+    required: [false, "Password Is Required!"],
     // minLength: [8, "Password Must Contain At Least 8 Characters!"],
     select: false,
   },
