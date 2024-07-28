@@ -23,6 +23,14 @@ const appointmentSchema = new mongoose.Schema({
     type: String,
     required: [true, "Age Is Required!"],
   },
+  gender: {
+    type: String,
+    // required: [true, "Gender Is Required!"],
+  },
+  address: {
+    type: String,
+    required: [true, "Address Is Required!"],
+  },
   problem: {
     type: String,
     required: [true, "Problem Is Required!"],
