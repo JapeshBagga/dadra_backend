@@ -6,12 +6,12 @@ const appointmentSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, "Name Is Required!"],
-    minLength: [3, " Name Must Contain At Least 3 Characters!"],
+    // minLength: [3, " Name Must Contain At Least 3 Characters!"],
   },
   email: {
     type: String,
-    required: [true, "Email Is Required!"],
-    validate: [validator.isEmail, "Provide A Valid Email!"],
+    // required: [true, "Email Is Required!"],
+    // validate: [validator.isEmail, "Provide A Valid Email!"],
   },
   phone: {
     type: String,
@@ -21,7 +21,7 @@ const appointmentSchema = new mongoose.Schema({
   },
   age: {
     type: String,
-    required: [true, "Age Is Required!"],
+    // required: [true, "Age Is Required!"],
   },
   gender: {
     type: String,
@@ -29,7 +29,7 @@ const appointmentSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: [true, "Address Is Required!"],
+    // required: [true, "Address Is Required!"],
   },
   problem: {
     type: String,

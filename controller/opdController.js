@@ -4,7 +4,7 @@ import { Opd } from '../models/opdSchema.js';
 export const getOpdByPatientId = async (req, res) => {
   try {
     const { patientId } = req.params;
-    const opd = await Opd.findOne({ patientId });
+    const opd = await Opd.find({ patientId }).populate("patientId");
 
     if (opd) {
       res.status(200).json(opd);
@@ -22,7 +22,8 @@ export const upsertOpd = async (req, res) => {
     const { patientId } = req.params;
     const opdData = req.body;
 
-    let opd = await Opd.findOneAndUpdate({ patientId }, opdData, { new: true, upsert: true });
+    let opd = await Opd.create({ patientId, ...opdData, });
+    console.log("🚀 ~ upsertOpd ~ opd:", opd)
 
     res.status(200).json(opd);
   } catch (error) {

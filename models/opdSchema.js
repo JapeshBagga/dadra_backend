@@ -44,7 +44,7 @@ const opdSchema = new Schema({
   },
   patientId: {
     type: Schema.Types.ObjectId,
-    ref: "appointment",
+    ref: "Appointment",
     required: true,
   },
   bp: {
@@ -71,8 +71,10 @@ const opdSchema = new Schema({
   advice: {
     type: String,
     required: [true, "Provide A Valid BP!"],
-  },
-});
+  }
+},{
+    timestamps:true
+  });
 
 export const Opd = mongoose.model("Opd", opdSchema);
 
