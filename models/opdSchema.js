@@ -51,6 +51,14 @@ const opdSchema = new Schema({
     type: String,
     required: [true, "Provide A Valid BP!"]
   },
+  spo2: {
+    type: String,
+    required: [true, "Provide A Valid SPO2!"]
+  },
+  rbs: {
+    type: String,
+    required: [true, "Provide A Valid RBS!"]
+  },
   rr: {
     type: String,
   },
@@ -61,6 +69,14 @@ const opdSchema = new Schema({
   diagonsis: {
     type: String,
     required: [true, "Provide A Valid BP!"],
+  },
+  investigation: {
+    type: String,
+    required: [true, "Provide A Valid Investigation!"],
+  },
+  complain: {
+    type: String,
+    required: [true, "Provide A Valid complain!"],
   },
   medicines: {
     type: [

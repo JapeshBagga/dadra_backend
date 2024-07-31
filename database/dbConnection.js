@@ -6,6 +6,7 @@ export default async function () {
         const MONGO_URI = process.env.MONGO_URI;
         await mongoose.connect(MONGO_URI, {
           dbName: "MERN_STACK_HOSPITAL_MANAGEMENT_SYSTEM",
+          autoIndex: true,
         });
         mongoose.set("debug", true);
         console.log("MongoDB: connected");

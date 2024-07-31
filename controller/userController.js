@@ -13,7 +13,6 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     !email ||
     !phone ||
     !nic ||
-    !dob ||
     !gender ||
     !password
   ) {
