@@ -34,6 +34,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [false, "Age Is Required!"],
   },
+  address: {
+    type: String,
+    required: [false, "Address Is Required!"],
+  },
   problem: {
     type: String,
     required: [false, "Problem Is Required!"],
