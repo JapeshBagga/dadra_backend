@@ -8,6 +8,8 @@ const medicineSchema = new mongoose.Schema({
   expiryDate: { type: Date, required: false },
   mfdDate: { type: Date, required: false },
   fssaiNo: { type: String, required: false },
+  price: { type: String, required: false },
+
 });
 
 export const Medicine = mongoose.model("medicine", medicineSchema);
