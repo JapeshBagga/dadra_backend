@@ -7,6 +7,7 @@ const pathologySchema = new mongoose.Schema({
 //   lab: { type: String, required: true },
   sample_collected_date: { type: Date, required: false },
   expected_date: { type: Date, required: false },
+  price: { type: String, required: false },
 //   fssaiNo: { type: String, required: false },
 });
 
