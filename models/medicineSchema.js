@@ -8,7 +8,9 @@ const medicineSchema = new mongoose.Schema({
   expiryDate: { type: Date, required: false },
   mfdDate: { type: Date, required: false },
   fssaiNo: { type: String, required: false },
+  batchNo: { type: String, required: false },
   price: { type: String, required: false },
+  salePrice: { type: String, required: false },
 
 });
 

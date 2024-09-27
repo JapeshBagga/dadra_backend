@@ -20,8 +20,15 @@ export const getOpdByPatientId = async (req, res) => {
 export const upsertOpd = async (req, res) => {
   try {
     const { patientId } = req.params;
-    const opdData = req.body;
 
+    const opds = await Opd.find({});
+    const opdId = `OPD${opds.length}`;
+
+    const opdData = {
+      ...req.body,
+      opdId
+    };
+    
     let opd = await Opd.create({ patientId, ...opdData, });
     console.log("🚀 ~ upsertOpd ~ opd:", opd)
 
