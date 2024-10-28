@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 const pathologySchema = new mongoose.Schema({
   name: { type: String, required: true, unique:true },
-  case_id: { type: String, required: false },
+  value_observed: { type: String, required: false },
   // lotSize: { type: Number, required: true },
 //   lab: { type: String, required: true },
-  sample_collected_date: { type: Date, required: false },
-  expected_date: { type: Date, required: false },
-  price: { type: String, required: false },
+  unit: { type: String, required: false },
+  normal_range: { type: String, required: false },
+  // price: { type: String, required: false },
 //   fssaiNo: { type: String, required: false },
 });
 

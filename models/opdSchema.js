@@ -15,7 +15,7 @@ const medicineSchema = new Schema({
     category: {
       type: String,
       required: [true, "Provide A Category!"],
-      enum:["Tablet", "Capsule", "Syrup"]
+      // enum:["Tablet", "Capsule", "Syrup"]
     },
     name: {
       type: String,
