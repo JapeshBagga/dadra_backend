@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const pathologySchema = new mongoose.Schema({
-  name: { type: String, required: true, unique:true },
+  name: { type: String, required: true, },
   value_observed: { type: String, required: false },
   // lotSize: { type: Number, required: true },
 //   lab: { type: String, required: true },

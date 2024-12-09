@@ -3,8 +3,8 @@ import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import { Pathology } from "../models/pathology.js";
 
 export const addPathology = catchAsyncErrors(async (req, res, next) => {
-    const exist = await Pathology.findOne({name: req.body.name.trim()});
-    if(exist)  return res.status(404).json({ error: 'Lab Test already exist' });
+    // const exist = await Pathology.findOne({name: req.body.name.trim()});
+    // if(exist)  return res.status(404).json({ error: 'Lab Test already exist' });
 
     const test = new Pathology(req.body);
     await test.save();
